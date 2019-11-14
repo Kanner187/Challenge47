@@ -12,7 +12,10 @@ struct Activity: Codable , Identifiable{
     let id = UUID()
     let title: String
     let description: String
-    var completions: Int 
+    var completions: Int
+    mutating func completed(){
+        self.completions += 1
+    }
 }
 
 

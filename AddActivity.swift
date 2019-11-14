@@ -12,7 +12,7 @@ struct AddActivity: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var title = ""
     @State private var description = ""
-    var completions = 0
+    @State private var completions = 0
     var activities: Activities
     @State private var alertShowing = false
     
