@@ -16,15 +16,19 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(activities.activities) {activity in
-                    NavigationLink(destination: AddActivity(activities: self.activities)) {
+                    NavigationLink(destination: DescriptionView(activity: activity)) {
                         HStack{
                           Text(activity.title)
-                            .font(.title)
+                            .font(.headline)
                           Text("\(activity.completions)")
+                            .font(.system(size: 10, weight: .semibold, design: .serif))
                         }
                         
                     }
                    
+                }
+                .onDelete { (IndexSet) in
+                    self.removeRow(offsets: IndexSet)
                 }
             }
             .navigationBarTitle("Activity Tracker", displayMode: .automatic)
@@ -32,11 +36,18 @@ struct ContentView: View {
                 self.showingForm = true
             }){
               Image(systemName:"plus")
+                .resizable()
+                .frame(width: 20 , height: 20)
             })
+                .frame(width: 50 , height: 50)
         }
         .sheet(isPresented: $showingForm) {
             AddActivity(activities: self.activities)
         }
+    }
+    
+    func removeRow(offsets: IndexSet){
+        self.activities.activities.remove(atOffsets: offsets)
     }
 }
 

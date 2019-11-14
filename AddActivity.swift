@@ -39,6 +39,11 @@ struct AddActivity: View {
                 Alert(title: Text("Problem!").foregroundColor(.red), message: Text("Leave no field empty"), dismissButton: .default(Text("Okay")))
             })
             .navigationBarTitle(Text("Add Activity"), displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }){
+                    Text("cancel")
+                })
         }
     }
     

@@ -15,6 +15,7 @@
 		1B3AD0FE237C2AAB000B91EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3AD0FC237C2AAB000B91EC /* LaunchScreen.storyboard */; };
 		1B3AD106237C2AC7000B91EC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3AD105237C2AC7000B91EC /* Activity.swift */; };
 		1B3AD10A237C6B84000B91EC /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3AD109237C6B84000B91EC /* AddActivity.swift */; };
+		1B89107C237D5D6E001A6064 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89107B237D5D6E001A6064 /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B3AD0FF237C2AAB000B91EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B3AD105237C2AC7000B91EC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = SOURCE_ROOT; };
 		1B3AD109237C6B84000B91EC /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = SOURCE_ROOT; };
+		1B89107B237D5D6E001A6064 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1B3AD0F1237C2AA5000B91EC /* AppDelegate.swift */,
 				1B3AD0F3237C2AA5000B91EC /* SceneDelegate.swift */,
 				1B3AD0F5237C2AA5000B91EC /* ContentView.swift */,
+				1B89107B237D5D6E001A6064 /* DescriptionView.swift */,
 				1B3AD0F7237C2AAB000B91EC /* Assets.xcassets */,
 				1B3AD0FC237C2AAB000B91EC /* LaunchScreen.storyboard */,
 				1B3AD0FF237C2AAB000B91EC /* Info.plist */,
@@ -155,6 +158,7 @@
 				1B3AD0F2237C2AA5000B91EC /* AppDelegate.swift in Sources */,
 				1B3AD0F4237C2AA5000B91EC /* SceneDelegate.swift in Sources */,
 				1B3AD10A237C6B84000B91EC /* AddActivity.swift in Sources */,
+				1B89107C237D5D6E001A6064 /* DescriptionView.swift in Sources */,
 				1B3AD106237C2AC7000B91EC /* Activity.swift in Sources */,
 				1B3AD0F6237C2AA5000B91EC /* ContentView.swift in Sources */,
 			);
