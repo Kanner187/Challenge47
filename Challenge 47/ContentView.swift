@@ -20,6 +20,7 @@ struct ContentView: View {
                         HStack{
                           Text(activity.title)
                             .font(.headline)
+                            Spacer()
                           Text("\(activity.completions)")
                             .font(.system(size: 10, weight: .semibold, design: .serif))
                         }
@@ -39,8 +40,7 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 20 , height: 20)
             })
-                .frame(width: 50 , height: 50)
-        }
+                        }
         .sheet(isPresented: $showingForm) {
             AddActivity(activities: self.activities)
         }
