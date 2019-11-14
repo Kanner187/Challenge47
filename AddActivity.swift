@@ -29,7 +29,6 @@ struct AddActivity: View {
                 Button(action: {
                     //Perform button action
                     self.addActivity()
-                    self.presentationMode.wrappedValue.dismiss()
                 }){
                     Text("Add Activity")
                 }
@@ -48,14 +47,28 @@ struct AddActivity: View {
     }
     
     func addActivity(){
+        
         guard
             self.title != ""  ,
             self.description != "" else {
                 self.alertShowing = true
-            return
+                return
         }
+
+        //Validation
+        let checker = UITextChecker()
+        let range = NSRange(location: 0, length: title.utf16.count)
+        let misSpelledRange = checker.rangeOfMisspelledWord(in: title, range: range, startingAt: 0, wrap: false, language: "en")
+        
+        guard misSpelledRange.location == NSNotFound
+            else{
+                self.alertShowing = true
+                return
+        }
+        
         let activity = Activity(title: self.title, description: self.description, completions: self.completions)
         self.activities.activities.append(activity)
+        self.presentationMode.wrappedValue.dismiss()
     }
 
 }
