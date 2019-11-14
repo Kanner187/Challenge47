@@ -9,10 +9,27 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    var activity: Activity
+    @State var activity: Activity
     
     var body: some View {
-        Text(activity.description)
+        GeometryReader{ geometry in
+            ScrollView {
+                VStack{
+                    Text(self.activity.description)
+                        .frame(width: geometry.size.width)
+                        .padding()
+                    Section{
+                        Button(action: {
+                            self.activity.completed()
+                        }){
+                            Text("completed: \(self.activity.completions)")
+                        }
+                    .padding()
+                    }
+                }
+            }
+          }
+        .navigationBarTitle("\(self.activity.title)" , displayMode: .inline)
     }
 }
 
@@ -23,3 +40,6 @@ struct DescriptionView_Previews: PreviewProvider {
         DescriptionView(activity: activity.activities[0])
     }
 }
+/*
+ Add functionality to button to modify completions property of an activity. 
+ */
